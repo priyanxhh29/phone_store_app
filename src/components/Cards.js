@@ -5,15 +5,17 @@ import Cardsdata from './CardsData'
 import "./style.css";
 import { useDispatch } from 'react-redux';
 import { ADD } from '../redux/actions/action';
-import { DLT } from '../redux/actions/action';
+
+
 
 const Cards = () => {
 
-  const [data, setData] = useState(Cardsdata);
-  // console.log(data);
-  const itemDelete =(e)=>{
-    
-  }
+ 
+
+  // , setData
+  const [data] = useState(Cardsdata);
+  // // console.log(data);
+  
 
   const dispatch = useDispatch();
 
@@ -44,10 +46,8 @@ const Cards = () => {
                     <div className="button_div d-flex justify-content-center">
                     <Button variant="primary"  
                       onClick={()=> send(element)}
-                     className='col-lg-6 m-2'>Add to Cart</Button>
-                     <Button variant="danger"  
-                      onClick={ ()=> itemDelete(element)} 
-                     className='col-lg-6 m-2'>Remove</Button>
+                     className='col-lg-12 m-2'>Add to Cart</Button>
+                   
                     </div>
                   
                   </Card.Body>
